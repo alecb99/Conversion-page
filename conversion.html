@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body{
+        background-color: #C6E0D2;
+        color : black;
+		text-align: center;
+		
+    }
+h1{
+		padding-top: 50px;
+		font-family : URW Chancery L, cursive;
+}
+p{
+		font-family : URW Chancery L, cursive;
+		font-size: 25px;
+}
+.button {
+		 background-color: #e7e7e7; color: black;
+		 font-family : URW Chancery L, cursive;
+		 font-size: 20px;
+}
+#feet,#centimeters,#meters,#inches {
+		height: 30px;
+		text-align: center;
+		font-size: 20px;
+		font-family : URW Chancery L, cursive;
+}
+</style>
+
+
+
+<body>
+
+<h1>EZ-CONVERSION</h1>
+
+<p>
+Length in feet to be converted<br><input type = "text" id = "feet" size = "3"> <br></p>
+<input type = "button" class = "button" onclick = " return inches()" value = "in">
+<input type = "button" class = "button" onclick = " return centimeters()"value = "cm">
+<input type = "button" class = "button" onclick = " return meters()"value = "m">
+
+<p>
+Length in centimeters to be converted<br><input type = "text" id = "centimeters" size = "3"> <br></p>
+<input type = "button" class = "button" onclick = " return cm_to_in()" value = "in">
+<input type = "button" class = "button" onclick = " return cm_to_ft()"value = "ft">
+<input type = "button" class = "button" onclick = " return cm_to_m()"value = "m">
+
+<p>
+Length in meters to be converted<br><input type = "text" id = "meters" size = "3"> <br></p>
+<input type = "button" class = "button" onclick = " return m_to_ft()" value = "ft">
+<input type = "button" class = "button" onclick = " return m_to_cm()"value = "cm">
+<input type = "button" class = "button" onclick = " return m_to_in()"value = "in">
+
+<p>
+Length in inches to be converted<br><input type = "text" id = "inches" size = "3"> <br></p>
+<input type = "button" class = "button" onclick = " return in_to_m()" value = "m">
+<input type = "button" class = "button" onclick = " return in_to_cm()"value = "cm">
+<input type = "button" class = "button" onclick = " return in_to_ft()"value = "ft">
+</body>
+
+<script>
+function inches()
+{
+	var inch_conversion
+	inch_conversion = document.getElementById("feet").value*12
+	alert("The length in inches is " + inch_conversion)
+}
+
+function centimeters()
+{
+	var cm_conversion
+	cm_conversion = document.getElementById("feet").value*30.48
+	alert("The length in centimeters is " + cm_conversion)
+}
+function meters()
+{
+	var m_conversion
+	m_conversion = document.getElementById("feet").value/3.281
+	alert("The length in meters is " + m_conversion)
+}
+
+function cm_to_in()
+{
+	var cmconvin
+	cmconvin = document.getElementById("centimeters").value/2.54
+	alert("The length in inches is " + cmconvin)
+}
+
+function cm_to_ft()
+{
+	var cmconvft
+	cmconvft = document.getElementById("centimeters").value/30.48
+	alert("The length in feet is " + cmconvft)
+}
+
+function cm_to_m()
+{
+	var cmconvm
+	cmconvm = document.getElementById("centimeters").value/100
+	alert("The length in meters is " + cmconvm)
+}
+
+
+function m_to_ft()
+{
+	var mconvft
+	mconvft = document.getElementById("meters").value*3.281
+	alert("The length in feet is " + mconvft)
+}
+
+function m_to_cm()
+{
+	var mconvcm
+	mconvcm = document.getElementById("meters").value*100
+	alert("The length in centimeters is " + mconvcm)
+}
+
+function m_to_in()
+{
+	var mconvin
+	mconvin = document.getElementById("meters").value*39.37
+	alert("The length in inches is " + mconvin)
+}
+
+
+function in_to_cm()
+{
+	var inconvcm
+	inconvcm = document.getElementById("inches").value*2.54
+	alert("The length in centimeters is " + inconvcm)
+}
+
+function in_to_m()
+{
+	var inconvm
+	inconvm = document.getElementById("inches").value/39.37
+	alert("The length in meters is " + inconvm)
+}
+
+function in_to_ft()
+{
+	var inconvft
+	inconvft = document.getElementById("inches").value/12
+	alert("The length in feet is " + inconvft)
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
